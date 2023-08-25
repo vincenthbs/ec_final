@@ -1,23 +1,37 @@
-@server = https://fictional-couscous-vgqvx74v6cv76-8080.app.github.dev
-###
+@server = https://fictional-couscous-vgqvx74v6cv76-8081.app.github.dev
+
+### Obtener un instrumento específico ###
 GET {{server}}/api/instrumentos/2
-###
+
+### Crear un nuevo instrumento ###
 POST {{server}}/api/instrumentos
 Content-Type: application/json
 
-{"nombre": "Quena", "categoria": "Viento", "descripcion": "Como una flauta"}
-###
+{
+  "nombre": "Quena",
+  "categoria": "Viento",
+  "descripcion": "Como una flauta"
+}
+
+### Obtener la lista de músicos ###
 GET {{server}}/api/musicos
-###
+
+### Crear un nuevo músico ###
 POST {{server}}/api/musicos
 Content-Type: application/json
 
-{"nombre": "Joaquín"}
-###
-GET {{server}}/api/bandas
-###
-GET {{server}}/api/bandas/1
-###
-GET {{server}}/api/bandas/1/formacion
-###
+{
+  "nombre": "Joaquín"
+}
+
+### Obtener la lista de equipos ###
+GET {{server}}/api/equipos
+
+### Obtener un equipo específico ###
+GET {{server}}/api/equipos/1
+
+### Obtener la formación de un equipo específico ###
+GET {{server}}/api/equipos/1/formacion
+
+### Obtener la lista de integrantes ###
 GET {{server}}/api/integrantes

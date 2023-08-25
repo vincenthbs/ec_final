@@ -12,21 +12,21 @@ public class Integrante {
     private @Id @GeneratedValue Long id;
 
     @ManyToOne()
-    @JoinColumn(name = "id_banda")
-    private Banda banda;
+    @JoinColumn(name = "id_equipo")
+    private Equipo equipo;
 
     @ManyToOne()
     @JoinColumn(name = "id_musico")
-    private Musico musico;
+    private Persona musico;
 
     @ManyToOne()
     @JoinColumn(name = "id_instrumento")
-    private Instrumento instrumento;
+    private Deporte instrumento;
 
     public Integrante() {}
 
-    public Integrante(Banda banda, Musico musico, Instrumento instrumento) {
-        this.banda = banda;
+    public Integrante(Equipo equipo, Persona musico, Deporte instrumento) {
+        this.equipo = equipo;
         this.musico = musico;
         this.instrumento = instrumento;
     }
@@ -39,27 +39,27 @@ public class Integrante {
 		this.id = id;
 	}
 
-	public Banda getBanda() {
-		return banda;
+	public Equipo getEquipo() {
+		return equipo;
 	}
 
-	public void setBanda(Banda banda) {
-		this.banda = banda;
+	public void setEquipo(Equipo equipo) {
+		this.equipo = equipo;
 	}
 
-	public Musico getMusico() {
+	public Persona getMusico() {
 		return musico;
 	}
 
-	public void setMusico(Musico musico) {
+	public void setMusico(Persona musico) {
 		this.musico = musico;
 	}
 
-	public Instrumento getInstrumento() {
+	public Deporte getInstrumento() {
 		return instrumento;
 	}
 
-	public void setInstrumento(Instrumento instrumento) {
+	public void setInstrumento(Deporte instrumento) {
 		this.instrumento = instrumento;
 	}
 

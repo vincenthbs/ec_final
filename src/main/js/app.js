@@ -1,33 +1,32 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-const {createBrowserRouter, RouterProvider} = require('react-router-dom');
+const { createBrowserRouter, RouterProvider } = require('react-router-dom');
 
 const HomePage = require('./pages/home');
-const NuevoMusicoPage = require('./pages/nuevo-musico');
-const VerInstrumentoPage = require('./pages/ver-instrumento');
-const NuevoInstrumentoPage = require('./pages/nuevo-instrumento');
-const VerMusicoPage = require('./pages/ver-musico');
-const EditarInstrumentoPage = require('./pages/editar-instrumento');
-const VerBandaPage = require('./pages/ver-banda');
+const NuevoPersonaPage = require('./pages/nuevo-persona'); 
+const VerDeportePage = require('./pages/ver-deporte'); 
+const NuevoDeportePage = require('./pages/nuevo-deporte'); 
+const VerPersonaPage = require('./pages/ver-persona'); 
+const EditarDeportePage = require('./pages/editar-deporte'); 
+const VerEquipoPage = require('./pages/ver-equipo');
 const NuevoIntegrantePage = require('./pages/nuevo-integrante');
 
+const routes = [
+    { path: '/', element: <HomePage /> },
+    { path: '/ver-deporte/:id', element: <VerDeportePage /> },
+    { path: '/nuevo-deporte', element: <NuevoDeportePage /> },
+    { path: '/ver-persona/:id', element: <VerPersonaPage /> },
+    { path: '/nuevo-persona', element: <NuevoPersonaPage /> },
+    { path: '/editar-deporte/:id', element: <EditarDeportePage /> },
+    { path: '/ver-equipo/:id', element: <VerEquipoPage /> },
+    { path: '/ver-equipo/:id/nuevo-integrante', element: <NuevoIntegrantePage /> },
+];
 
-const router = createBrowserRouter([
-	{ path: '/', element: <HomePage /> },
-	{ path: '/ver-instrumento/:id', element: <VerInstrumentoPage /> },
-	{ path: '/nuevo-instrumento', element: <NuevoInstrumentoPage /> },
-	{ path: '/ver-musico/:id', element: <VerMusicoPage /> },
-	{ path: '/nuevo-musico', element: <NuevoMusicoPage /> },
-	{ path: '/editar-instrumento/:id', element: <EditarInstrumentoPage /> },
-	{ path: '/ver-banda/:id', element: <VerBandaPage /> },
-	{ path: '/ver-banda/:id/nuevo-integrante', element: <NuevoIntegrantePage /> },
-
-
-])
-
+const router = createBrowserRouter(routes);
 
 ReactDOM.render(
-	<React.StrictMode>
-		<RouterProvider router={router} />
-	</React.StrictMode>,
-	document.getElementById('react'))
+    <React.StrictMode>
+        <RouterProvider router={router} />
+    </React.StrictMode>,
+    document.getElementById('react')
+);
