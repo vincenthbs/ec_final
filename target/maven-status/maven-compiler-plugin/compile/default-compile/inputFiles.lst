@@ -1,0 +1,11 @@
+/workspaces/ec_final/src/main/java/com/example/demo/DemoApplication.java
+/workspaces/ec_final/src/main/java/com/example/demo/EquipoRepository.java
+/workspaces/ec_final/src/main/java/com/example/demo/Equipo.java
+/workspaces/ec_final/src/main/java/com/example/demo/Persona.java
+/workspaces/ec_final/src/main/java/com/example/demo/Deporte.java
+/workspaces/ec_final/src/main/java/com/example/demo/HomeController.java
+/workspaces/ec_final/src/main/java/com/example/demo/DatabaseLoader.java
+/workspaces/ec_final/src/main/java/com/example/demo/Integrante.java
+/workspaces/ec_final/src/main/java/com/example/demo/PersonaRepository.java
+/workspaces/ec_final/src/main/java/com/example/demo/IntegranteRepository.java
+/workspaces/ec_final/src/main/java/com/example/demo/DeporteRepository.java

@@ -63,6 +63,4 @@ public class Integrante {
 		this.instrumento = instrumento;
 	}
 
-    
-
 }

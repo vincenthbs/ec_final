@@ -1,13 +1,12 @@
 const React = require('react');
-const { Link } = require('react-router-dom');
 const client = require('../client');
+const { Link } = require('react-router-dom');
 
 class HomePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = { deportes: [], personas: [], equipos: [] };
     }
-
     componentDidMount() {
         client({ method: 'GET', path: '/api/deportes' }).done(response => {
             this.setState({ deportes: response.entity._embedded.deportes });
@@ -21,7 +20,6 @@ class HomePage extends React.Component {
             this.setState({ equipos: response.entity._embedded.equipos });
         });
     }
-
     render() {
         return (
             <>
@@ -45,7 +43,7 @@ class HomePage extends React.Component {
                     </div>
                 </div>
             </>
-        );
+        )
     }
 }
 
@@ -57,7 +55,7 @@ const Titulo = (props) => {
             <hr />
             Lista completa de {props.entidad.toLowerCase()}
         </>
-    );
+    )
 }
 
 class DeporteList extends React.Component {
@@ -76,7 +74,7 @@ class DeporteList extends React.Component {
                     {deportes}
                 </tbody>
             </table>
-        );
+        )
     }
 }
 
@@ -95,7 +93,7 @@ class PersonaList extends React.Component {
                     {personas}
                 </tbody>
             </table>
-        );
+        )
     }
 }
 
@@ -114,7 +112,7 @@ class EquipoList extends React.Component {
                     {equipos}
                 </tbody>
             </table>
-        );
+        )
     }
 }
 
@@ -130,7 +128,7 @@ class Deporte extends React.Component {
                     <Link to={"/editar-deporte/" + id}>Editar</Link>
                 </td>
             </tr>
-        );
+        )
     }
 }
 
@@ -144,7 +142,7 @@ class Persona extends React.Component {
                     <Link to={"/ver-persona/" + id}>Ver</Link>
                 </td>
             </tr>
-        );
+        )
     }
 }
 
@@ -158,8 +156,8 @@ class Equipo extends React.Component {
                     <Link to={"/ver-equipo/" + id}>Ver</Link>
                 </td>
             </tr>
-        );
+        )
     }
 }
 
-export default HomePage;
+module.exports = HomePage;
